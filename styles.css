@@ -1030,6 +1030,10 @@ body[data-theme="light"] .service-button {
   gap: 0.5rem;
 }
 
+.form-field-select {
+  position: relative;
+}
+
 .form-field span {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.78rem;
@@ -1063,6 +1067,73 @@ body[data-theme="light"] .service-button {
     transform 0.2s ease;
 }
 
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 3.6rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
+    linear-gradient(135deg, rgba(124, 174, 255, 0.14), rgba(47, 230, 177, 0.08)),
+    linear-gradient(45deg, transparent 50%, var(--accent) 50%),
+    linear-gradient(135deg, var(--accent) 50%, transparent 50%),
+    rgba(255, 255, 255, 0.015);
+  background-repeat: no-repeat;
+  background-size:
+    auto,
+    auto,
+    0.62rem 0.62rem,
+    0.62rem 0.62rem,
+    auto;
+  background-position:
+    center,
+    center,
+    calc(100% - 1.42rem) 50%,
+    calc(100% - 1rem) 50%,
+    center;
+}
+
+.form-field-select::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 3.15rem);
+  right: 2.85rem;
+  width: 1px;
+  height: 2rem;
+  background: linear-gradient(180deg, transparent, var(--line-strong), transparent);
+  pointer-events: none;
+}
+
+.form-field select:required:invalid {
+  color: var(--text-soft);
+}
+
+.form-field select option {
+  color: var(--text);
+  background: #0b1630;
+}
+
+.form-field select option[value=""] {
+  color: var(--text-soft);
+}
+
+.form-field select option:checked,
+.form-field select option:hover,
+.form-field select option:focus {
+  color: var(--text);
+  background: #102447;
+}
+
+.form-field select optgroup {
+  color: var(--accent);
+  background: #08111f;
+}
+
+.form-field select::-ms-expand {
+  display: none;
+}
+
 .form-field textarea {
   min-height: 150px;
   resize: vertical;
@@ -1087,6 +1158,48 @@ body[data-theme="light"] .form-field textarea {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.85), transparent),
     rgba(255, 255, 255, 0.76);
+}
+
+body[data-theme="light"] .form-field select {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), transparent),
+    linear-gradient(135deg, rgba(47, 100, 217, 0.1), rgba(12, 165, 122, 0.06)),
+    linear-gradient(45deg, transparent 50%, var(--signal) 50%),
+    linear-gradient(135deg, var(--signal) 50%, transparent 50%),
+    rgba(255, 255, 255, 0.76);
+  background-repeat: no-repeat;
+  background-size:
+    auto,
+    auto,
+    0.62rem 0.62rem,
+    0.62rem 0.62rem,
+    auto;
+  background-position:
+    center,
+    center,
+    calc(100% - 1.42rem) 50%,
+    calc(100% - 1rem) 50%,
+    center;
+}
+
+body[data-theme="light"] .form-field select option {
+  color: var(--text);
+  background: #eef4ff;
+}
+
+body[data-theme="light"] .form-field select option[value=""] {
+  color: var(--text-soft);
+}
+
+body[data-theme="light"] .form-field select option:checked,
+body[data-theme="light"] .form-field select option:hover,
+body[data-theme="light"] .form-field select option:focus {
+  background: #dfeafe;
+}
+
+body[data-theme="light"] .form-field select optgroup {
+  color: var(--signal);
+  background: #f4f8ff;
 }
 
 body[data-theme="light"] .form-field input:focus,
