@@ -51,8 +51,5 @@ Configuracao recomendada na Netlify:
 
 ## Repositorio
 
-- GitHub: `https://github.com/gabrielnnavarro/agencia-alfa-acessoria`
-
-## Observacao
-
-O nome atual do repositorio e da URL publicada usa `acessoria`. Se a marca final for `assessoria`, a correcao pode ser feita depois no GitHub, na Netlify e, se desejar, no dominio publico.
+- GitHub: `https://github.com/gabrielnnavarro/agencia-alfa-assessoria`
+- Netlify: `https://agenciaalfaassessoria.netlify.app`
