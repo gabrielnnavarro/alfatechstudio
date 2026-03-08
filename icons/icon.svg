@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">ALFA App Icon</title>
+  <desc id="desc">Rounded square app icon with a stylized A for ALFA.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1728" />
+      <stop offset="55%" stop-color="#06153a" />
+      <stop offset="100%" stop-color="#2b1d25" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ee6a6" />
+      <stop offset="100%" stop-color="#84ffd7" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="132" fill="url(#bg)" />
+  <circle cx="102" cy="104" r="110" fill="#2ee6a6" fill-opacity="0.14" />
+  <circle cx="430" cy="98" r="92" fill="#ff8c42" fill-opacity="0.12" />
+  <rect x="124" y="124" width="264" height="264" rx="88" fill="#ffffff" fill-opacity="0.08" />
+  <text
+    x="50%"
+    y="55%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-size="198"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="700"
+    fill="url(#accent)"
+  >
+    A
+  </text>
+</svg>

@@ -1,0 +1,899 @@
+/* Variáveis globais de design para o tema escuro padrão */
+:root {
+  color-scheme: dark;
+  --page-width: 1180px;
+  --page-gutter: clamp(1rem, 2vw, 2rem);
+  --section-padding: clamp(2.5rem, 5vw, 5rem);
+  --bg: #0c1220;
+  --bg-elevated: rgba(14, 21, 36, 0.78);
+  --bg-card: rgba(18, 27, 46, 0.82);
+  --bg-card-strong: rgba(25, 36, 60, 0.95);
+  --text: #f3f6fc;
+  --text-muted: #adbbd4;
+  --border: rgba(193, 209, 235, 0.15);
+  --accent: #2ee6a6;
+  --accent-strong: #10c58a;
+  --accent-soft: rgba(46, 230, 166, 0.16);
+  --secondary: #ff8c42;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --hero-gradient: radial-gradient(circle at top left, rgba(46, 230, 166, 0.2), transparent 38%),
+    radial-gradient(circle at top right, rgba(255, 140, 66, 0.22), transparent 30%),
+    linear-gradient(145deg, #09101d 0%, #111b30 45%, #09111f 100%);
+}
+
+/* Sobrescritas do tema claro aplicadas em body[data-theme="light"] */
+body[data-theme="light"] {
+  color-scheme: light;
+  --bg: #eff3f7;
+  --bg-elevated: rgba(255, 255, 255, 0.78);
+  --bg-card: rgba(255, 255, 255, 0.84);
+  --bg-card-strong: rgba(250, 252, 255, 0.96);
+  --text: #0d1727;
+  --text-muted: #42506a;
+  --border: rgba(13, 23, 39, 0.12);
+  --accent: #0d9467;
+  --accent-strong: #066b4b;
+  --accent-soft: rgba(13, 148, 103, 0.1);
+  --secondary: #d95f16;
+  --shadow: 0 24px 70px rgba(30, 52, 82, 0.15);
+  --hero-gradient: radial-gradient(circle at top left, rgba(13, 148, 103, 0.15), transparent 34%),
+    radial-gradient(circle at top right, rgba(217, 95, 22, 0.18), transparent 30%),
+    linear-gradient(145deg, #edf3f8 0%, #f8fafc 46%, #ebf0f5 100%);
+}
+
+/* Reset básico e ajustes de compatibilidade entre navegadores */
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Estrutura base da página, tipografia e fundo ambiente */
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  position: relative;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  border-radius: 999px;
+  filter: blur(80px);
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::before {
+  width: 22rem;
+  height: 22rem;
+  top: 5rem;
+  left: -7rem;
+  background: rgba(46, 230, 166, 0.12);
+}
+
+body::after {
+  width: 24rem;
+  height: 24rem;
+  right: -8rem;
+  top: 28rem;
+  background: rgba(255, 140, 66, 0.12);
+}
+
+.background-layer {
+  position: fixed;
+  inset: 0;
+  background: var(--hero-gradient);
+  z-index: -3;
+}
+
+/* Primitivas compartilhadas */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Limites de largura compartilhados entre o cabeçalho e as seções */
+.site-header,
+.section {
+  width: min(
+    var(--page-width),
+    calc(100% - (var(--page-gutter) * 2) - env(safe-area-inset-left) - env(safe-area-inset-right))
+  );
+  margin: 0 auto;
+}
+
+/* Cabeçalho fixo e área da marca */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: calc(1rem + env(safe-area-inset-top)) 0 1rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand-mark {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #04110c;
+  background: linear-gradient(135deg, var(--accent), #8bf3d0);
+  box-shadow: 0 10px 30px rgba(46, 230, 166, 0.26);
+}
+
+.brand-copy {
+  display: grid;
+}
+
+.brand-copy strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+}
+
+.brand-copy span {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* Botões de ação do cabeçalho: idioma, instalar e tema */
+.header-controls {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.control-button {
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  touch-action: manipulation;
+}
+
+.control-button:hover,
+.button:hover,
+.service-button:hover,
+.floating-whatsapp:hover {
+  transform: translateY(-2px);
+}
+
+/* Espaçamento padrão das seções */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+/* Layout e conteúdo textual da seção principal */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+  align-items: center;
+  gap: 2rem;
+  min-height: calc(100vh - 6rem);
+}
+
+.hero-copy,
+.hero-panel,
+.section-heading,
+.about-card,
+.about-list,
+.cta-card,
+.info-strip,
+.service-card,
+.process-card {
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero h1,
+.section-heading h2,
+.cta-card h2,
+.about-card h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5.6rem);
+  max-width: 10ch;
+}
+
+.hero-text,
+.section-heading p,
+.panel-card p,
+.about-card p,
+.about-list p,
+.process-card p,
+.cta-card p,
+.info-strip p {
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.hero-text {
+  max-width: 62ch;
+  margin: 1.4rem 0 0;
+  font-size: 1.05rem;
+}
+
+/* CTAs principais e botões adaptados para toque */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.8rem 0;
+}
+
+.button,
+.service-button,
+.floating-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button {
+  padding: 0.95rem 1.35rem;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--accent), #84ffd7);
+  color: #04110c;
+  box-shadow: 0 16px 35px rgba(46, 230, 166, 0.22);
+}
+
+body[data-theme="light"] .button-primary {
+  color: white;
+  background: linear-gradient(135deg, var(--accent), #19b57f);
+}
+
+.button-secondary {
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.button-install,
+.control-button-install {
+  border: 1px solid rgba(46, 230, 166, 0.28);
+  background: linear-gradient(135deg, rgba(46, 230, 166, 0.12), rgba(255, 140, 66, 0.08));
+  color: var(--text);
+}
+
+body[data-theme="light"] .button-install,
+body[data-theme="light"] .control-button-install {
+  border-color: rgba(13, 148, 103, 0.24);
+  background: linear-gradient(135deg, rgba(13, 148, 103, 0.08), rgba(217, 95, 22, 0.08));
+}
+
+/* Lista de destaques da seção principal */
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.hero-points li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}
+
+.hero-points li::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* Superfícies de card reutilizadas no hero, serviços, processo e CTA */
+.hero-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel-card,
+.info-strip,
+.service-card,
+.process-card,
+.about-card,
+.about-list article,
+.cta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.panel-card,
+.service-card,
+.process-card,
+.about-card,
+.about-list article,
+.cta-card,
+.info-strip {
+  border-radius: 1.6rem;
+}
+
+.panel-main {
+  padding: 2rem;
+  min-height: 280px;
+  background:
+    linear-gradient(160deg, rgba(46, 230, 166, 0.13), transparent 54%),
+    linear-gradient(195deg, rgba(255, 140, 66, 0.11), transparent 50%),
+    var(--bg-card-strong);
+}
+
+.panel-label {
+  display: inline-flex;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Cards de apoio visual da seção principal */
+.panel-title {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin-top: 1rem;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.panel-grid .panel-card {
+  padding: 1.25rem;
+  min-height: 130px;
+}
+
+.panel-grid strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+}
+
+.panel-grid span {
+  margin-top: 0.7rem;
+  display: block;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Seções de apoio abaixo da dobra principal */
+.info-strip {
+  display: flex;
+  align-items: center;
+  padding: 1.8rem 2rem;
+}
+
+.info-strip strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+}
+
+.services-section,
+.process-section {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.section-heading {
+  max-width: 52rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+}
+
+/* Grade dinâmica dos serviços */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  padding: 1.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-card h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+}
+
+.service-stack {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.service-button {
+  border: none;
+  padding: 0.9rem 1.1rem;
+  min-height: 48px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  min-width: 154px;
+  text-align: center;
+  font-weight: 600;
+  touch-action: manipulation;
+}
+
+body[data-theme="light"] .service-button {
+  background: rgba(13, 23, 39, 0.06);
+}
+
+/* Seções de processo e institucional */
+.process-grid,
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.process-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.process-card,
+.about-list article {
+  padding: 1.4rem;
+}
+
+.process-card span {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+}
+
+.process-card h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+}
+
+.about-card {
+  padding: 2rem;
+}
+
+.about-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-list article strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* CTA final e atalho persistente do WhatsApp */
+.cta-section {
+  padding-bottom: 6rem;
+}
+
+.cta-card {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  background:
+    linear-gradient(150deg, rgba(46, 230, 166, 0.12), transparent 35%),
+    linear-gradient(235deg, rgba(255, 140, 66, 0.12), transparent 40%),
+    var(--bg-card-strong);
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: max(1.2rem, env(safe-area-inset-right));
+  bottom: max(1.2rem, env(safe-area-inset-bottom));
+  z-index: 9;
+  padding: 1rem 1.2rem;
+  min-height: 52px;
+  font-weight: 700;
+  color: #04110c;
+  background: linear-gradient(135deg, var(--accent), #84ffd7);
+  box-shadow: 0 16px 40px rgba(46, 230, 166, 0.28);
+  touch-action: manipulation;
+}
+
+body[data-theme="light"] .floating-whatsapp {
+  color: white;
+  background: linear-gradient(135deg, var(--accent), #19b57f);
+}
+
+/* Modal usado para explicar os fluxos alternativos de instalação do PWA */
+.install-help-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: max(1.2rem, env(safe-area-inset-top)) max(1.2rem, env(safe-area-inset-right))
+    max(1.2rem, env(safe-area-inset-bottom)) max(1.2rem, env(safe-area-inset-left));
+}
+
+.install-help-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 9, 17, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.install-help-dialog {
+  position: relative;
+  width: min(100%, 34rem);
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  background:
+    linear-gradient(150deg, rgba(46, 230, 166, 0.1), transparent 35%),
+    linear-gradient(235deg, rgba(255, 140, 66, 0.1), transparent 45%),
+    var(--bg-card-strong);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.install-help-eyebrow {
+  margin-right: 2.2rem;
+}
+
+.install-help-dialog h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.05;
+}
+
+.install-help-dialog p,
+.install-help-steps {
+  color: var(--text-muted);
+}
+
+.install-help-dialog p {
+  margin: 0.95rem 0 0;
+  line-height: 1.65;
+}
+
+.install-help-steps {
+  margin: 1.2rem 0 0;
+  padding-left: 1.3rem;
+  display: grid;
+  gap: 0.75rem;
+  line-height: 1.55;
+}
+
+.install-help-action {
+  margin-top: 1.4rem;
+}
+
+.install-help-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.install-help-close:hover {
+  transform: translateY(-1px);
+}
+
+/* Estilos de fallback quando backdrop-filter não estiver disponível */
+@supports not ((backdrop-filter: blur(18px)) or (-webkit-backdrop-filter: blur(18px))) {
+  .site-header,
+  .control-button,
+  .panel-card,
+  .info-strip,
+  .service-card,
+  .process-card,
+  .about-card,
+  .about-list article,
+  .cta-card,
+  .install-help-dialog {
+    background: var(--bg-card-strong);
+  }
+}
+
+/* Ajustes de layout para desktops maiores */
+@media (min-width: 1440px) {
+  :root {
+    --page-width: 1320px;
+  }
+
+  .hero {
+    gap: 3rem;
+  }
+}
+
+/* Ajustes de layout para tablets e notebooks menores */
+@media (max-width: 1080px) {
+  .hero,
+  .about-section,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero h1 {
+    max-width: 12ch;
+  }
+}
+
+/* Empilhamento mobile-first para telas estreitas */
+@media (max-width: 740px) {
+  .site-header {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .header-controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .control-button {
+    flex: 1 1 180px;
+    justify-content: center;
+  }
+
+  .section {
+    width: min(
+      var(--page-width),
+      calc(100% - 1.2rem - env(safe-area-inset-left) - env(safe-area-inset-right))
+    );
+    padding: 2.2rem 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 1.3rem;
+  }
+
+  .hero-actions,
+  .service-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .panel-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-button,
+  .button {
+    width: 100%;
+  }
+
+  .panel-main,
+  .service-card,
+  .process-card,
+  .about-card,
+  .about-list article,
+  .cta-card,
+  .info-strip {
+    border-radius: 1.3rem;
+  }
+
+  .floating-whatsapp {
+    left: max(1rem, env(safe-area-inset-left));
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    text-align: center;
+    justify-content: center;
+  }
+
+  .install-help-panel {
+    align-items: end;
+    padding: 0;
+  }
+
+  .install-help-dialog {
+    width: 100%;
+    border-radius: 1.4rem 1.4rem 0 0;
+    padding: 1.35rem 1rem calc(1.2rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Refinos para celulares compactos */
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: clamp(2.6rem, 13vw, 3.8rem);
+    max-width: 100%;
+  }
+
+  .hero-text,
+  .section-heading p,
+  .panel-card p,
+  .about-card p,
+  .about-list p,
+  .process-card p,
+  .cta-card p,
+  .info-strip p {
+    font-size: 0.97rem;
+  }
+
+  .panel-main,
+  .cta-card,
+  .about-card,
+  .service-card,
+  .process-card,
+  .about-list article,
+  .info-strip {
+    padding: 1.2rem;
+  }
+
+  .site-header {
+    gap: 0.85rem;
+  }
+
+  .brand-mark {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Ajustes para aparelhos muito estreitos */
+@media (max-width: 420px) {
+  .header-controls {
+    gap: 0.6rem;
+  }
+
+  .control-button {
+    flex-basis: 100%;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .service-footer {
+    gap: 0.75rem;
+  }
+
+  .install-help-dialog h2 {
+    max-width: 11ch;
+  }
+}
+
+/* Respeita a preferência de movimento reduzido do usuário */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

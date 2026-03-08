@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados base, codificação e integração com navegador/PWA -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0c1220" id="theme-color-meta" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ALFA" />
+    <meta name="application-name" content="ALFA" />
+    <meta
+      name="description"
+      content="ALFA oferece desenvolvimento sob medida para web, mobile, automação, dados, cloud e qualquer necessidade de software."
+    />
+    <title>ALFA | Desenvolvimento Sob Medida</title>
+    <!-- Fontes externas e arquivos do aplicativo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="dark">
+    <!-- Camada visual de fundo com o gradiente principal -->
+    <div class="background-layer"></div>
+    <!-- Cabeçalho fixo com marca, idioma, instalação e troca de tema -->
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ALFA home">
+        <span class="brand-mark">A</span>
+        <span class="brand-copy">
+          <strong>ALFA</strong>
+          <span data-i18n="brandTag">Software studio</span>
+        </span>
+      </a>
+
+      <div class="header-controls">
+        <button
+          class="control-button"
+          id="language-toggle"
+          type="button"
+          aria-label="Switch language"
+        >
+          PT
+        </button>
+        <button
+          class="control-button control-button-install"
+          id="install-button-header"
+          type="button"
+          data-i18n="installAppShort"
+        >
+          Instalar
+        </button>
+        <button
+          class="control-button"
+          id="theme-toggle"
+          type="button"
+          aria-label="Alternar tema"
+        >
+          <span data-i18n="themeButton">Modo claro</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Seção principal com proposta de valor, CTAs e resumo de capacidades -->
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">Desenvolvimento sem limite de stack</p>
+          <h1 data-i18n="heroTitle">Criamos software para qualquer tipo de serviço digital.</h1>
+          <p class="hero-text" data-i18n="heroText">
+            Sites, sistemas, apps, APIs, automações, IA, dashboards, integrações e qualquer
+            solução de desenvolvimento que sua empresa precisar.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              id="hero-quote-button"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="heroCta"
+            >
+              Pedir orçamento no WhatsApp
+            </a>
+            <button
+              class="button button-install"
+              id="install-button-hero"
+              type="button"
+              data-i18n="installApp"
+            >
+              Instalar app
+            </button>
+            <a class="button button-secondary" href="#services" data-i18n="heroSecondary">
+              Ver serviços
+            </a>
+          </div>
+
+          <ul class="hero-points">
+            <li data-i18n="heroPoint1">Projetos sob medida para qualquer porte</li>
+            <li data-i18n="heroPoint2">Atendimento em português e inglês</li>
+            <li data-i18n="heroPoint3">Entrega focada em resultado e manutenção contínua</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-card panel-main">
+            <span class="panel-label" data-i18n="panelLabel">Cobertura completa</span>
+            <strong class="panel-title" data-i18n="panelTitle">Do briefing ao deploy</strong>
+            <p data-i18n="panelText">
+              Arquitetura, design, desenvolvimento, integração, performance, suporte e evolução.
+            </p>
+          </div>
+
+          <div class="panel-grid">
+            <article class="panel-card">
+              <strong>Web</strong>
+              <span data-i18n="miniCard1">Plataformas, landing pages e sistemas internos</span>
+            </article>
+            <article class="panel-card">
+              <strong>Mobile</strong>
+              <span data-i18n="miniCard2">Apps nativos, híbridos e produtos conectados</span>
+            </article>
+            <article class="panel-card">
+              <strong>Cloud</strong>
+              <span data-i18n="miniCard3">Infraestrutura, APIs, dados e automação</span>
+            </article>
+            <article class="panel-card">
+              <strong>AI</strong>
+              <span data-i18n="miniCard4">Assistentes, fluxos inteligentes e produtividade</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faixa curta de posicionamento sobre a cobertura técnica -->
+      <section class="section info-strip">
+        <div>
+          <strong data-i18n="infoStripTitle">Qualquer linguagem. Qualquer escopo.</strong>
+          <p data-i18n="infoStripText">
+            Trabalhamos com front-end, back-end, mobile, desktop, low-code, cloud e integrações
+            para transformar necessidade de negócio em software funcional.
+          </p>
+        </div>
+      </section>
+
+      <!-- Catálogo de serviços renderizado dinamicamente pelo JavaScript -->
+      <section class="section services-section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="servicesEyebrow">Serviços</p>
+          <h2 data-i18n="servicesTitle">O que podemos desenvolver para sua empresa</h2>
+          <p data-i18n="servicesText">
+            Se envolve software, nós atendemos. Abaixo estão as frentes mais pedidas.
+          </p>
+        </div>
+
+        <div class="services-grid" id="services-grid"></div>
+      </section>
+
+      <!-- Explicação do processo comercial e técnico em quatro etapas -->
+      <section class="section process-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="processEyebrow">Processo</p>
+          <h2 data-i18n="processTitle">Um fluxo simples para tirar a ideia do papel</h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <span>01</span>
+            <h3 data-i18n="processStep1Title">Diagnóstico</h3>
+            <p data-i18n="processStep1Text">
+              Entendemos objetivo, prazo, integrações e nível de complexidade.
+            </p>
+          </article>
+          <article class="process-card">
+            <span>02</span>
+            <h3 data-i18n="processStep2Title">Estratégia</h3>
+            <p data-i18n="processStep2Text">
+              Definimos stack, arquitetura, cronograma e plano de entrega.
+            </p>
+          </article>
+          <article class="process-card">
+            <span>03</span>
+            <h3 data-i18n="processStep3Title">Construção</h3>
+            <p data-i18n="processStep3Text">
+              Desenvolvemos, testamos e refinamos com foco em performance e clareza.
+            </p>
+          </article>
+          <article class="process-card">
+            <span>04</span>
+            <h3 data-i18n="processStep4Title">Evolução</h3>
+            <p data-i18n="processStep4Text">
+              Entregamos com suporte, manutenção e melhorias contínuas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bloco institucional com posicionamento e diferenciais da empresa -->
+      <section class="section about-section">
+        <div class="about-card">
+          <p class="eyebrow" data-i18n="aboutEyebrow">ALFA</p>
+          <h2 data-i18n="aboutTitle">Tecnologia sob medida para operações reais</h2>
+          <p data-i18n="aboutText">
+            Atuamos como parceiro técnico para empresas que precisam construir, modernizar ou
+            automatizar produtos e processos com velocidade e critério.
+          </p>
+        </div>
+
+        <div class="about-list">
+          <article>
+            <strong data-i18n="aboutItem1Title">Amplitude técnica</strong>
+            <p data-i18n="aboutItem1Text">
+              Escolhemos a linguagem e a arquitetura pelo problema, não por preferência fixa.
+            </p>
+          </article>
+          <article>
+            <strong data-i18n="aboutItem2Title">Execução completa</strong>
+            <p data-i18n="aboutItem2Text">
+              Podemos atuar do protótipo ao ambiente produtivo, incluindo integrações e suporte.
+            </p>
+          </article>
+          <article>
+            <strong data-i18n="aboutItem3Title">Foco comercial</strong>
+            <p data-i18n="aboutItem3Text">
+              O objetivo não é só código: é entregar algo útil para vender, operar ou escalar.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bloco final de conversão com repetição do CTA do WhatsApp -->
+      <section class="section cta-section">
+        <div class="cta-card">
+          <p class="eyebrow" data-i18n="ctaEyebrow">Próximo passo</p>
+          <h2 data-i18n="ctaTitle">Conte o que você precisa e montamos o orçamento</h2>
+          <p data-i18n="ctaText">
+            Fale pelo WhatsApp em português ou inglês. A mensagem já sai pronta com o contexto
+            correto.
+          </p>
+          <a
+            class="button button-primary"
+            id="footer-quote-button"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            data-i18n="ctaButton"
+          >
+            Solicitar orçamento
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Atalho flutuante do WhatsApp visível durante toda a navegação -->
+    <a
+      class="floating-whatsapp"
+      id="floating-whatsapp-button"
+      href="#"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="WhatsApp"
+    >
+      <span>WhatsApp</span>
+    </a>
+
+    <!-- Modal compartilhado com ajuda de instalação para iOS, file:// e navegadores sem suporte -->
+    <div class="install-help-panel" id="install-help-panel" hidden aria-hidden="true">
+      <div class="install-help-backdrop" data-install-close></div>
+      <div
+        class="install-help-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="install-help-title"
+        aria-describedby="install-help-text"
+      >
+        <button
+          class="install-help-close"
+          id="install-help-close"
+          type="button"
+          aria-label="Fechar"
+          data-install-close
+        >
+          ×
+        </button>
+        <p class="eyebrow install-help-eyebrow" data-i18n="installAppShort">Instalar</p>
+        <h2 id="install-help-title" data-i18n="installHelpTitle">Como instalar o app</h2>
+        <p id="install-help-text"></p>
+        <ol class="install-help-steps" id="install-help-steps"></ol>
+        <button
+          class="button button-secondary install-help-action"
+          id="install-help-close-button"
+          type="button"
+          data-i18n="installHelpClose"
+        >
+          Fechar
+        </button>
+      </div>
+    </div>
+
+    <!-- Camada principal de comportamento: idioma, tema, WhatsApp e instalação do PWA -->
+    <script src="script.js"></script>
+  </body>
+</html>
