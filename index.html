@@ -170,6 +170,19 @@
         <div class="services-grid" id="services-grid"></div>
       </section>
 
+      <section class="section featured-section" id="solutions">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="featuredEyebrow">Soluções</p>
+          <h2 data-i18n="featuredTitle">Entregas completas para diferentes tipos de operação</h2>
+          <p data-i18n="featuredText">
+            Empresas de desenvolvimento mais completas costumam destacar projetos, arquitetura e
+            resultados esperados. Aqui mostramos esse mesmo nível de clareza.
+          </p>
+        </div>
+
+        <div class="featured-grid" id="featured-grid"></div>
+      </section>
+
       <!-- Explicação do processo comercial e técnico em quatro etapas -->
       <section class="section process-section">
         <div class="section-heading">
@@ -209,6 +222,45 @@
         </div>
       </section>
 
+      <section class="section delivery-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="deliveryEyebrow">Modelos</p>
+          <h2 data-i18n="deliveryTitle">Modelos de atendimento para diferentes momentos do negócio</h2>
+          <p data-i18n="deliveryText">
+            Além de construir software, também estruturamos a forma de execução conforme a
+            necessidade da sua empresa.
+          </p>
+        </div>
+
+        <div class="delivery-grid" id="delivery-grid"></div>
+      </section>
+
+      <section class="section industries-section" id="industries">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="industriesEyebrow">Setores</p>
+          <h2 data-i18n="industriesTitle">Setores e contextos que atendemos com frequência</h2>
+          <p data-i18n="industriesText">
+            O mesmo núcleo técnico pode ser adaptado para operações comerciais, internas e
+            digitais de diferentes segmentos.
+          </p>
+        </div>
+
+        <div class="industries-grid" id="industries-grid"></div>
+      </section>
+
+      <section class="section stack-section" id="stack">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="stackEyebrow">Stack</p>
+          <h2 data-i18n="stackTitle">Tecnologias e frentes que conseguimos conectar em um projeto</h2>
+          <p data-i18n="stackText">
+            Sites completos de software costumam mostrar stack, arquitetura e ecossistema técnico.
+            Organizamos isso em grupos para facilitar a leitura.
+          </p>
+        </div>
+
+        <div class="stack-groups" id="stack-groups"></div>
+      </section>
+
       <!-- Bloco institucional com posicionamento e diferenciais da empresa -->
       <section class="section about-section">
         <div class="about-card">
@@ -239,6 +291,77 @@
               O objetivo não é só código: é entregar algo útil para vender, operar ou escalar.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
+          <h2 data-i18n="faqTitle">Perguntas frequentes antes de pedir um orçamento</h2>
+          <p data-i18n="faqText">
+            As empresas mais completas normalmente antecipam dúvidas comerciais e técnicas. Esta
+            seção foi pensada com esse objetivo.
+          </p>
+        </div>
+
+        <div class="faq-list" id="faq-list"></div>
+      </section>
+
+      <section class="section brief-section" id="brief">
+        <div class="brief-card">
+          <div class="section-heading brief-heading">
+            <p class="eyebrow" data-i18n="briefEyebrow">Briefing rápido</p>
+            <h2 data-i18n="briefTitle">Monte um resumo do projeto e envie pelo WhatsApp</h2>
+            <p data-i18n="briefText">
+              Em vez de mandar só uma mensagem genérica, você pode enviar um briefing estruturado
+              com contexto, prazo e faixa de investimento.
+            </p>
+          </div>
+
+          <form class="brief-form" id="brief-form">
+            <label class="form-field" for="brief-name">
+              <span data-i18n="briefNameLabel">Seu nome</span>
+              <input id="brief-name" name="name" type="text" required />
+            </label>
+
+            <label class="form-field" for="brief-company">
+              <span data-i18n="briefCompanyLabel">Empresa</span>
+              <input id="brief-company" name="company" type="text" />
+            </label>
+
+            <label class="form-field" for="brief-service">
+              <span data-i18n="briefServiceLabel">Tipo de projeto</span>
+              <select id="brief-service" name="service" required></select>
+            </label>
+
+            <label class="form-field" for="brief-budget">
+              <span data-i18n="briefBudgetLabel">Faixa de investimento</span>
+              <select id="brief-budget" name="budget" required></select>
+            </label>
+
+            <label class="form-field" for="brief-timeline">
+              <span data-i18n="briefTimelineLabel">Prazo desejado</span>
+              <select id="brief-timeline" name="timeline" required></select>
+            </label>
+
+            <label class="form-field form-field-wide" for="brief-summary">
+              <span data-i18n="briefSummaryLabel">Resumo do que precisa</span>
+              <textarea id="brief-summary" name="summary" rows="6" required></textarea>
+            </label>
+
+            <p class="form-note form-field-wide" data-i18n="briefNote">
+              Esse formulário abre o WhatsApp com a mensagem pronta no idioma atual do site.
+            </p>
+
+            <button
+              class="button button-primary form-field-wide"
+              id="brief-submit"
+              type="submit"
+              data-i18n="briefSubmit"
+            >
+              Enviar briefing no WhatsApp
+            </button>
+          </form>
         </div>
       </section>
 
