@@ -358,6 +358,10 @@ main {
 .section-heading,
 .about-card,
 .about-list,
+.priority-shell,
+.priority-panel,
+.priority-surface,
+.priority-block,
 .cta-card,
 .info-strip,
 .service-card,
@@ -558,6 +562,8 @@ body[data-theme="light"] .button-primary {
 /* Cartões, painéis e superfícies compartilhadas entre as seções. */
 .panel-card,
 .info-strip,
+.priority-surface,
+.priority-block,
 .service-card,
 .featured-card,
 .delivery-card,
@@ -583,6 +589,8 @@ body[data-theme="light"] .button-primary {
 
 .panel-card::before,
 .info-strip::before,
+.priority-surface::before,
+.priority-block::before,
 .service-card::before,
 .featured-card::before,
 .delivery-card::before,
@@ -605,6 +613,8 @@ body[data-theme="light"] .button-primary {
 
 .panel-card::after,
 .info-strip::after,
+.priority-surface::after,
+.priority-block::after,
 .service-card::after,
 .featured-card::after,
 .delivery-card::after,
@@ -697,6 +707,7 @@ body[data-theme="light"] .button-primary {
 
 /* Grades de conteúdo e seções institucionais. */
 .services-section,
+.priority-section,
 .featured-section,
 .process-section,
 .delivery-section,
@@ -740,6 +751,192 @@ body[data-theme="light"] .button-primary {
 
 .stack-groups {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Mapa interativo que recomenda a estrutura ideal conforme o contexto do projeto. */
+.priority-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.priority-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.priority-tab {
+  position: relative;
+  min-height: 48px;
+  padding: 0.86rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.priority-tab:hover,
+.priority-tab:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  color: var(--text);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+}
+
+.priority-tab.is-active {
+  border-color: rgba(47, 230, 177, 0.34);
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(47, 230, 177, 0.18), rgba(124, 174, 255, 0.08)),
+    rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 16px 34px rgba(47, 230, 177, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.priority-surface {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  background:
+    linear-gradient(145deg, rgba(47, 230, 177, 0.08), transparent 28%),
+    linear-gradient(235deg, rgba(124, 174, 255, 0.08), transparent 44%),
+    var(--panel-strong);
+}
+
+.priority-intro {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 60rem;
+}
+
+.priority-badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.42rem 0.72rem;
+  border-radius: 999px;
+  background: var(--signal-soft);
+  color: var(--signal);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.priority-intro h3,
+.priority-block strong,
+.priority-model-title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.priority-intro h3 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.02;
+}
+
+.priority-intro p,
+.priority-block p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.66;
+}
+
+.priority-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.priority-block {
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.priority-block strong {
+  font-size: 1.08rem;
+  line-height: 1.08;
+}
+
+.priority-list {
+  list-style: none;
+  display: grid;
+  gap: 0.72rem;
+  padding: 0;
+  margin: 0;
+}
+
+.priority-list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.priority-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  left: 0;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+}
+
+.priority-model-kicker {
+  color: var(--accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.priority-model-title {
+  font-size: 1.26rem;
+  line-height: 1.08;
+}
+
+.priority-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.priority-tag {
+  display: inline-flex;
+  padding: 0.45rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.77rem;
+}
+
+body[data-theme="light"] .priority-tab {
+  background: rgba(16, 32, 55, 0.03);
+}
+
+body[data-theme="light"] .priority-tab.is-active,
+body[data-theme="light"] .priority-tag {
+  background: rgba(16, 32, 55, 0.05);
 }
 
 .service-card,
@@ -1280,6 +1477,8 @@ body[data-theme="light"] .form-field textarea:focus {
   .control-button,
   .panel-card,
   .info-strip,
+  .priority-surface,
+  .priority-block,
   .service-card,
   .featured-card,
   .delivery-card,
@@ -1306,6 +1505,10 @@ body[data-theme="light"] .form-field textarea:focus {
   .hero,
   .about-section,
   .brief-card {
+    grid-template-columns: 1fr;
+  }
+
+  .priority-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1340,6 +1543,10 @@ body[data-theme="light"] .form-field textarea:focus {
 
   .control-button {
     flex: 1 1 180px;
+  }
+
+  .priority-tab {
+    flex: 1 1 220px;
   }
 
   .services-grid,
@@ -1395,6 +1602,8 @@ body[data-theme="light"] .form-field textarea:focus {
   }
 
   .panel-main,
+  .priority-surface,
+  .priority-block,
   .service-card,
   .featured-card,
   .delivery-card,
@@ -1411,6 +1620,8 @@ body[data-theme="light"] .form-field textarea:focus {
   }
 
   .panel-main,
+  .priority-surface,
+  .priority-block,
   .service-card,
   .featured-card,
   .delivery-card,
@@ -1454,6 +1665,10 @@ body[data-theme="light"] .form-field textarea:focus {
   }
 
   .control-button {
+    flex-basis: 100%;
+  }
+
+  .priority-tab {
     flex-basis: 100%;
   }
 

@@ -5,229 +5,253 @@ const WHATSAPP_NUMBER = "5511978190028";
 // Todo o conteúdo traduzível da interface fica centralizado aqui para manter PT e EN alinhados.
 const translations = {
   pt: {
-    pageTitle: "ALFA Engenharia de Software | Desenvolvimento Sob Medida",
+    pageTitle: "ALFA Engenharia de Software | Produto Digital, Sistemas e Automação Sob Medida",
+    pageDescription:
+      "ALFA Engenharia de Software projeta sites, plataformas, apps, automações e integrações com foco em performance, acessibilidade, documentação e escala.",
     brandName: "ALFA Engenharia de Software",
-    brandTag: "Soluções digitais sob medida",
+    brandTag: "Produto digital, automação e escala",
     themeButtonLight: "Modo claro",
     themeButtonDark: "Modo escuro",
-    eyebrow: "Desenvolvimento sem limite de stack",
-    heroTitle: "Criamos software para qualquer tipo de serviço digital.",
+    eyebrow: "Engenharia digital para produto, operação e crescimento",
+    heroTitle: "Software sob medida para empresas que precisam lançar, integrar e escalar.",
     heroText:
-      "Sites, sistemas, apps, APIs, automações, IA, dashboards, integrações e qualquer solução de desenvolvimento que sua empresa precisar.",
+      "Projetamos sites, plataformas, apps, automações e sistemas com arquitetura clara, performance, acessibilidade e documentação para evolução real.",
     heroCta: "Pedir orçamento no WhatsApp",
     heroSecondary: "Ver serviços",
-    heroPoint1: "Projetos sob medida para qualquer porte",
-    heroPoint2: "Atendimento em português e inglês",
-    heroPoint3: "Entrega focada em resultado e manutenção contínua",
-    panelLabel: "Cobertura completa",
-    panelTitle: "Do briefing ao deploy",
+    heroPoint1: "Arquitetura pensada para crescer sem retrabalho",
+    heroPoint2: "Comunicação bilíngue para times locais e globais",
+    heroPoint3: "Qualidade técnica, handoff e suporte contínuo",
+    panelLabel: "Padrão de entrega",
+    panelTitle: "Discovery, engenharia e evolução contínua",
     panelText:
-      "Arquitetura, design, desenvolvimento, integração, performance, suporte e evolução.",
-    miniCard1: "Plataformas, landing pages e sistemas internos",
-    miniCard2: "Apps nativos, híbridos e produtos conectados",
-    miniCard3: "Infraestrutura, APIs, dados e automação",
-    miniCard4: "Assistentes, fluxos inteligentes e produtividade",
-    infoStripTitle: "Qualquer linguagem. Qualquer escopo.",
+      "Pesquisa, UX, arquitetura, desenvolvimento, QA, integrações e observabilidade no mesmo fluxo.",
+    miniCard1: "Sites institucionais, portais e produtos digitais",
+    miniCard2: "Aplicativos, jornadas mobile e operação em campo",
+    miniCard3: "Infraestrutura, APIs, dados e observabilidade",
+    miniCard4: "Automação, IA aplicada e ganho de produtividade",
+    infoStripTitle: "Estratégia, engenharia e execução no mesmo projeto.",
     infoStripText:
-      "Trabalhamos com front-end, back-end, mobile, desktop, low-code, cloud e integrações para transformar necessidade de negócio em software funcional.",
+      "Unimos UX, desenvolvimento, cloud, automação e integração para transformar demanda em software sólido, utilizável e fácil de evoluir.",
+    priorityEyebrow: "Prioridades",
+    priorityTitle: "Escolha o contexto e veja a estrutura técnica recomendada",
+    priorityText:
+      "Empresas e iniciativas educacionais valorizam leitura rápida, impacto claro e processo consistente. Este mapa resume a combinação de entregas mais adequada para cada cenário.",
+    priorityTablistLabel: "Cenários do projeto",
+    priorityBadge: "Cenário ativo",
+    priorityOutcomesTitle: "Resultados esperados",
+    priorityServicesTitle: "Frentes recomendadas",
+    priorityModelTitle: "Modelo de execução",
+    prioritySignalsTitle: "Padrões valorizados",
     servicesEyebrow: "Serviços",
-    servicesTitle: "O que podemos desenvolver para sua empresa",
+    servicesTitle: "Frentes que entregam valor em produto, operação e negócio",
     servicesText:
-      "Se envolve software, nós atendemos. Abaixo estão as frentes mais pedidas.",
+      "Do primeiro site institucional até sistemas críticos com integrações e automação, organizamos a stack pela necessidade real do projeto.",
     featuredEyebrow: "Soluções",
-    featuredTitle: "Entregas completas para diferentes tipos de operação",
+    featuredTitle: "Soluções desenhadas para receita, eficiência e escala",
     featuredText:
-      "Estruturamos soluções completas para operação, produto, vendas, automação e escala, sempre com foco em clareza técnica e resultado de negócio.",
+      "Cada entrega é organizada conforme operação, meta de negócio, maturidade técnica e necessidade de integração.",
     serviceButton: "Pedir orçamento",
     processEyebrow: "Processo",
-    processTitle: "Um fluxo simples para tirar a ideia do papel",
+    processTitle: "Processo claro para reduzir risco e acelerar decisão",
     processStep1Title: "Diagnóstico",
     processStep1Text:
-      "Entendemos objetivo, prazo, integrações e nível de complexidade.",
-    processStep2Title: "Estratégia",
+      "Mapeamos contexto, usuários, restrições, integrações e objetivos de negócio.",
+    processStep2Title: "Arquitetura",
     processStep2Text:
-      "Definimos stack, arquitetura, cronograma e plano de entrega.",
-    processStep3Title: "Construção",
+      "Definimos stack, experiência, dados, fluxos críticos e estratégia de entrega.",
+    processStep3Title: "Execução",
     processStep3Text:
-      "Desenvolvemos, testamos e refinamos com foco em performance e clareza.",
+      "Construímos com QA, revisão, responsividade, performance e integrações consistentes.",
     processStep4Title: "Evolução",
     processStep4Text:
-      "Entregamos com suporte, manutenção e melhorias contínuas.",
+      "Publicamos, acompanhamos, documentamos e priorizamos a próxima etapa com segurança.",
     deliveryEyebrow: "Modelos",
-    deliveryTitle: "Modelos de atendimento para diferentes momentos do negócio",
+    deliveryTitle: "Formatos de execução alinhados à maturidade do projeto",
     deliveryText:
-      "Além de construir software, também estruturamos a forma de execução conforme a necessidade da sua empresa.",
+      "A forma de trabalhar muda conforme o momento do negócio, o risco técnico e a velocidade exigida.",
     industriesEyebrow: "Setores",
-    industriesTitle: "Setores e contextos que atendemos com frequência",
+    industriesTitle: "Contextos em que produto, operação e experiência precisam andar juntos",
     industriesText:
-      "O mesmo núcleo técnico pode ser adaptado para operações comerciais, internas e digitais de diferentes segmentos.",
+      "Aplicamos o mesmo núcleo de engenharia em cenários comerciais, operacionais e educacionais, adaptando o desenho do sistema ao uso real.",
     stackEyebrow: "Stack",
-    stackTitle: "Tecnologias e frentes que conseguimos conectar em um projeto",
+    stackTitle: "Stack organizada por problema, não por modismo",
     stackText:
-      "Organizamos as principais frentes técnicas em grupos para facilitar a leitura e mostrar como diferentes tecnologias podem conviver no mesmo projeto.",
+      "A tecnologia entra como meio. O que orienta a escolha é manutenção, clareza arquitetural, integração e capacidade de crescimento.",
     aboutEyebrow: "ALFA",
-    aboutTitle: "Tecnologia sob medida para operações reais",
+    aboutTitle: "Parceiro técnico para empresas, produtos e iniciativas educacionais",
     aboutText:
-      "Atuamos como parceiro técnico para empresas que precisam construir, modernizar ou automatizar produtos e processos com velocidade e critério.",
-    aboutItem1Title: "Amplitude técnica",
+      "Atuamos em lançamentos, modernização, automação e evolução contínua, mantendo clareza de arquitetura, documentação e transferência de conhecimento.",
+    aboutItem1Title: "Decisão técnica com critério",
     aboutItem1Text:
-      "Escolhemos a linguagem e a arquitetura pelo problema, não por preferência fixa.",
-    aboutItem2Title: "Execução completa",
+      "Stack, framework e arquitetura são escolhidos por aderência, manutenção e custo de evolução.",
+    aboutItem2Title: "Entrega auditável",
     aboutItem2Text:
-      "Podemos atuar do protótipo ao ambiente produtivo, incluindo integrações e suporte.",
-    aboutItem3Title: "Foco comercial",
+      "Organizamos backlog, ambientes, integrações, documentação e handoff para o projeto continuar saudável.",
+    aboutItem3Title: "Impacto observável",
     aboutItem3Text:
-      "O objetivo não é só código: é entregar algo útil para vender, operar ou escalar.",
+      "Cada entrega precisa melhorar aquisição, operação, produtividade ou experiência do usuário final.",
     faqEyebrow: "FAQ",
-    faqTitle: "Perguntas frequentes antes de pedir um orçamento",
+    faqTitle: "Perguntas comuns antes de iniciar um projeto",
     faqText:
-      "Respondemos aqui as dúvidas mais comuns sobre escopo, atendimento, suporte e formato de contratação.",
+      "As respostas abaixo antecipam pontos que empresas, equipes internas e instituições costumam avaliar antes de contratar.",
     briefEyebrow: "Briefing rápido",
-    briefTitle: "Monte um resumo do projeto e envie pelo WhatsApp",
+    briefTitle: "Envie um briefing estruturado e acelere a análise técnica",
     briefText:
-      "Em vez de mandar só uma mensagem genérica, você pode enviar um briefing estruturado com contexto e objetivo do projeto.",
+      "Um pedido claro reduz retrabalho, melhora a estimativa inicial e ajuda a priorizar a arquitetura certa desde o começo.",
     briefNameLabel: "Seu nome",
     briefCompanyLabel: "Empresa",
     briefServiceLabel: "Tipo de projeto",
     briefSummaryLabel: "Resumo do que precisa",
     briefNote:
-      "Esse formulário abre o WhatsApp com a mensagem pronta no idioma atual do site.",
+      "O formulário prepara a mensagem no idioma atual com os campos essenciais para uma análise inicial mais rápida.",
     briefSubmit: "Enviar briefing no WhatsApp",
     briefNamePlaceholder: "Ex.: Gabriel Navarro",
-    briefCompanyPlaceholder: "Ex.: ALFA Assessoria",
+    briefCompanyPlaceholder: "Ex.: ALFA Engenharia",
     briefSummaryPlaceholder:
-      "Descreva o objetivo, funcionalidades, integrações e qualquer contexto importante.",
-    briefServicePlaceholder: "Selecione o tipo de projeto",
+      "Descreva objetivo, público, funcionalidades, integrações e qualquer restrição importante.",
+    briefServicePlaceholder: "Selecione a frente principal do projeto",
     briefMessageIntro:
-      "Olá, quero solicitar um orçamento com a ALFA Engenharia de Software. Segue um briefing rápido do projeto:",
+      "Olá, quero solicitar uma análise e um orçamento com a ALFA Engenharia de Software. Segue um briefing inicial do projeto:",
     briefMessageName: "Nome",
     briefMessageCompany: "Empresa",
     briefMessageService: "Tipo de projeto",
     briefMessageSummary: "Resumo",
     ctaEyebrow: "Próximo passo",
-    ctaTitle: "Conte o que você precisa e montamos o orçamento",
+    ctaTitle: "Descreva o contexto do projeto e receba um direcionamento técnico-comercial",
     ctaText:
-      "Fale pelo WhatsApp em português ou inglês. A mensagem já sai pronta com o contexto correto.",
+      "Seja para empresa, operação interna, produto digital ou iniciativa educacional, a conversa já começa com o contexto certo.",
     ctaButton: "Solicitar orçamento",
     floatingWhatsApp: "WhatsApp",
     quoteMessage:
-      "Olá, quero criar um orçamento para um projeto de desenvolvimento com a ALFA.",
+      "Olá, quero solicitar uma análise inicial e um orçamento para um projeto com a ALFA Engenharia de Software.",
     serviceQuoteMessage:
-      "Olá, quero solicitar um orçamento para o serviço de {service}.",
+      "Olá, quero solicitar uma análise inicial e um orçamento para o serviço de {service}.",
     languageLabel: "EN",
     themeToggleLabel: "Alternar tema",
     switchLanguageAria: "Switch language to English"
   },
   en: {
-    pageTitle: "ALFA Engenharia de Software | Custom Software Development",
+    pageTitle: "ALFA Engenharia de Software | Digital Products, Systems, and Automation",
+    pageDescription:
+      "ALFA Engenharia de Software designs websites, platforms, apps, automations, and integrations with focus on performance, accessibility, documentation, and scale.",
     brandName: "ALFA Engenharia de Software",
-    brandTag: "Tailored digital solutions",
+    brandTag: "Digital products, automation, and scale",
     themeButtonLight: "Light mode",
     themeButtonDark: "Dark mode",
-    eyebrow: "Development without stack limits",
-    heroTitle: "We build software for any kind of digital service.",
+    eyebrow: "Digital engineering for products, operations, and growth",
+    heroTitle: "Custom software for companies that need to launch, integrate, and scale.",
     heroText:
-      "Websites, systems, apps, APIs, automations, AI, dashboards, integrations, and any development solution your business needs.",
+      "We design websites, platforms, apps, automations, and systems with clear architecture, performance, accessibility, and documentation for long-term evolution.",
     heroCta: "Request a quote on WhatsApp",
     heroSecondary: "See services",
-    heroPoint1: "Custom projects for any company size",
-    heroPoint2: "Support in Portuguese and English",
-    heroPoint3: "Delivery focused on results and ongoing maintenance",
-    panelLabel: "Complete coverage",
-    panelTitle: "From briefing to deployment",
+    heroPoint1: "Architecture designed to grow without costly rework",
+    heroPoint2: "Bilingual communication for local and global teams",
+    heroPoint3: "Technical quality, handoff, and continuous support",
+    panelLabel: "Delivery standard",
+    panelTitle: "Discovery, engineering, and continuous evolution",
     panelText:
-      "Architecture, design, development, integration, performance, support, and continuous evolution.",
-    miniCard1: "Platforms, landing pages, and internal systems",
-    miniCard2: "Native apps, hybrid apps, and connected products",
-    miniCard3: "Infrastructure, APIs, data, and automation",
-    miniCard4: "Assistants, intelligent flows, and productivity",
-    infoStripTitle: "Any language. Any scope.",
+      "Research, UX, architecture, development, QA, integrations, and observability in the same delivery flow.",
+    miniCard1: "Institutional sites, portals, and digital products",
+    miniCard2: "Applications, mobile journeys, and field operations",
+    miniCard3: "Infrastructure, APIs, data, and observability",
+    miniCard4: "Automation, applied AI, and productivity gains",
+    infoStripTitle: "Strategy, engineering, and execution in the same project.",
     infoStripText:
-      "We work across front-end, back-end, mobile, desktop, low-code, cloud, and integrations to turn business needs into working software.",
+      "We combine UX, development, cloud, automation, and integrations to turn demand into software that is solid, usable, and easy to evolve.",
+    priorityEyebrow: "Priorities",
+    priorityTitle: "Choose the context and see the recommended technical structure",
+    priorityText:
+      "Companies and educational initiatives value fast scanning, clear impact, and consistent process. This map summarizes the right mix of deliveries for each scenario.",
+    priorityTablistLabel: "Project scenarios",
+    priorityBadge: "Active scenario",
+    priorityOutcomesTitle: "Expected outcomes",
+    priorityServicesTitle: "Recommended workstreams",
+    priorityModelTitle: "Delivery model",
+    prioritySignalsTitle: "Valued standards",
     servicesEyebrow: "Services",
-    servicesTitle: "What we can build for your company",
+    servicesTitle: "Workstreams that create value across product, operations, and business",
     servicesText:
-      "If it involves software, we can deliver it. These are the most requested workstreams.",
+      "From a first institutional website to critical systems with integrations and automation, we organize the stack around the real needs of the project.",
     featuredEyebrow: "Solutions",
-    featuredTitle: "Complete delivery formats for different kinds of operations",
+    featuredTitle: "Solutions designed for revenue, efficiency, and scale",
     featuredText:
-      "We structure complete solutions for operations, products, sales, automation, and scale, with focus on technical clarity and business results.",
+      "Each delivery is structured around operations, business goals, technical maturity, and integration needs.",
     serviceButton: "Request quote",
     processEyebrow: "Process",
-    processTitle: "A simple flow to turn an idea into a shipped product",
+    processTitle: "A clear process to reduce risk and speed up decisions",
     processStep1Title: "Discovery",
     processStep1Text:
-      "We understand goals, deadlines, integrations, and the level of complexity.",
-    processStep2Title: "Strategy",
+      "We map the context, users, constraints, integrations, and business objectives.",
+    processStep2Title: "Architecture",
     processStep2Text:
-      "We define the stack, architecture, roadmap, and delivery plan.",
-    processStep3Title: "Build",
+      "We define the stack, experience, data flows, critical paths, and delivery strategy.",
+    processStep3Title: "Execution",
     processStep3Text:
-      "We develop, test, and refine with focus on performance and clarity.",
+      "We build with QA, review, responsiveness, performance, and reliable integrations.",
     processStep4Title: "Scale",
     processStep4Text:
-      "We deliver with support, maintenance, and continuous improvements.",
+      "We launch, monitor, document, and prioritize the next step with confidence.",
     deliveryEyebrow: "Models",
-    deliveryTitle: "Engagement models for different business moments",
+    deliveryTitle: "Execution formats aligned with project maturity",
     deliveryText:
-      "Beyond building software, we also structure the execution format according to your company's needs.",
+      "The way we work changes according to business timing, technical risk, and the speed required.",
     industriesEyebrow: "Industries",
-    industriesTitle: "Industries and operating contexts we frequently support",
+    industriesTitle: "Contexts where product, operations, and experience need to move together",
     industriesText:
-      "The same technical core can be adapted for commercial, internal, and digital operations across different segments.",
+      "We apply the same engineering core across commercial, operational, and educational contexts, adapting the system design to the real use case.",
     stackEyebrow: "Stack",
-    stackTitle: "Technologies and workstreams we can connect within one project",
+    stackTitle: "A stack organized around the problem, not around hype",
     stackText:
-      "We organize the main technical areas into groups so it is easier to scan how different technologies connect inside the same project.",
+      "Technology is the medium. The main criteria are maintainability, architectural clarity, integration, and room to grow.",
     aboutEyebrow: "ALFA",
-    aboutTitle: "Tailored technology for real operations",
+    aboutTitle: "A technical partner for companies, products, and educational initiatives",
     aboutText:
-      "We act as a technical partner for companies that need to build, modernize, or automate products and processes with speed and rigor.",
-    aboutItem1Title: "Broad technical range",
+      "We work across launches, modernization, automation, and continuous evolution while keeping architecture, documentation, and knowledge transfer clear.",
+    aboutItem1Title: "Deliberate technical decisions",
     aboutItem1Text:
-      "We choose the language and architecture based on the problem, not on a fixed preference.",
-    aboutItem2Title: "Full execution",
+      "Stack, framework, and architecture are chosen for fit, maintainability, and the cost of future evolution.",
+    aboutItem2Title: "Auditable delivery",
     aboutItem2Text:
-      "We can work from prototype to production, including integrations and support.",
-    aboutItem3Title: "Commercial focus",
+      "We organize backlogs, environments, integrations, documentation, and handoff so the project remains healthy.",
+    aboutItem3Title: "Observable impact",
     aboutItem3Text:
-      "The goal is not just code. It is something useful to sell, operate, or scale.",
+      "Every delivery should improve acquisition, operations, productivity, or end-user experience.",
     faqEyebrow: "FAQ",
-    faqTitle: "Frequently asked questions before requesting a quote",
+    faqTitle: "Common questions before starting a project",
     faqText:
-      "Here we answer the most common questions about scope, support, communication, and engagement format.",
+      "The answers below anticipate points that companies, internal teams, and institutions usually evaluate before hiring.",
     briefEyebrow: "Quick brief",
-    briefTitle: "Build a project summary and send it on WhatsApp",
+    briefTitle: "Send a structured brief and speed up the technical assessment",
     briefText:
-      "Instead of sending only a generic message, you can send a structured brief with context and project goals.",
+      "A clear request reduces rework, improves the first estimate, and helps prioritize the right architecture from the start.",
     briefNameLabel: "Your name",
     briefCompanyLabel: "Company",
     briefServiceLabel: "Project type",
     briefSummaryLabel: "Project summary",
     briefNote:
-      "This form opens WhatsApp with the message already prepared in the current site language.",
+      "This form prepares the message in the current language with the essential fields for a faster initial assessment.",
     briefSubmit: "Send brief on WhatsApp",
     briefNamePlaceholder: "Ex.: Gabriel Navarro",
-    briefCompanyPlaceholder: "Ex.: ALFA Advisory",
+    briefCompanyPlaceholder: "Ex.: Northwind Operations",
     briefSummaryPlaceholder:
-      "Describe the goal, features, integrations, and any important context.",
-    briefServicePlaceholder: "Select the project type",
+      "Describe goals, users, features, integrations, and any important constraints.",
+    briefServicePlaceholder: "Select the main project workstream",
     briefMessageIntro:
-      "Hello, I would like to request a quote from ALFA Engenharia de Software. Here is a quick project brief:",
+      "Hello, I would like to request an initial assessment and a quote from ALFA Engenharia de Software. Here is a first project brief:",
     briefMessageName: "Name",
     briefMessageCompany: "Company",
     briefMessageService: "Project type",
     briefMessageSummary: "Summary",
     ctaEyebrow: "Next step",
-    ctaTitle: "Tell us what you need and we will prepare the quote",
+    ctaTitle: "Describe the project context and receive technical-commercial guidance",
     ctaText:
-      "Reach out on WhatsApp in Portuguese or English. The message already opens with the right context.",
+      "Whether this is for a company, an internal operation, a digital product, or an educational initiative, the conversation starts with the right context.",
     ctaButton: "Request a quote",
     floatingWhatsApp: "WhatsApp",
     quoteMessage:
-      "Hello, I would like to create a quote for a software development project with ALFA.",
+      "Hello, I would like to request an initial assessment and a quote for a project with ALFA Engenharia de Software.",
     serviceQuoteMessage:
-      "Hello, I would like to request a quote for the {service} service.",
+      "Hello, I would like to request an initial assessment and a quote for the {service} service.",
     languageLabel: "PT",
     themeToggleLabel: "Toggle theme",
     switchLanguageAria: "Mudar idioma para português"
@@ -611,6 +635,162 @@ const stackGroups = [
   }
 ];
 
+// Cenários usados para recomendar uma combinação de serviços e formato de execução.
+const priorityScenarios = [
+  {
+    id: "launch",
+    label: { pt: "Lançar um produto", en: "Launch a product" },
+    title: {
+      pt: "Estrutura ideal para entrar no ar com velocidade e base técnica consistente",
+      en: "The ideal setup to launch quickly with a reliable technical foundation"
+    },
+    description: {
+      pt: "Indicado para empresas que precisam apresentar valor com clareza, validar uma proposta e já nascer com espaço para evolução.",
+      en: "Best for companies that need to present value clearly, validate an offer, and launch with room to evolve."
+    },
+    outcomes: {
+      pt: [
+        "Posicionamento claro para apresentar valor e converter interesse",
+        "Arquitetura pronta para receber novas versões sem recomeçar do zero",
+        "Integrações, métricas e operação pensadas desde a primeira entrega"
+      ],
+      en: [
+        "Clear positioning to communicate value and convert interest",
+        "Architecture ready for new versions without restarting from scratch",
+        "Integrations, metrics, and operations considered from the first release"
+      ]
+    },
+    serviceIndexes: [0, 3, 7],
+    deliveryModelIndex: 0,
+    signals: {
+      pt: [
+        "UX orientada a conversão",
+        "Performance em mobile e desktop",
+        "Analytics e documentação desde o início"
+      ],
+      en: [
+        "Conversion-oriented UX",
+        "Performance on mobile and desktop",
+        "Analytics and documentation from day one"
+      ]
+    }
+  },
+  {
+    id: "operations",
+    label: { pt: "Automatizar a operação", en: "Automate operations" },
+    title: {
+      pt: "Fluxo recomendado para reduzir retrabalho e ganhar previsibilidade",
+      en: "A recommended flow to reduce rework and improve predictability"
+    },
+    description: {
+      pt: "Melhor caminho para times que precisam integrar áreas, remover tarefas manuais e dar visibilidade ao que acontece no dia a dia.",
+      en: "The best path for teams that need to connect departments, remove manual work, and gain visibility into daily operations."
+    },
+    outcomes: {
+      pt: [
+        "Menos dependência de tarefas repetitivas e planilhas paralelas",
+        "Integração entre atendimento, vendas, backoffice e operação",
+        "Processos mais rápidos, rastreáveis e consistentes"
+      ],
+      en: [
+        "Less dependence on repetitive work and parallel spreadsheets",
+        "Integration across support, sales, back office, and operations",
+        "Faster, traceable, and more consistent processes"
+      ]
+    },
+    serviceIndexes: [3, 4, 6],
+    deliveryModelIndex: 1,
+    signals: {
+      pt: [
+        "Mapeamento de processo",
+        "Dashboards e indicadores operacionais",
+        "Permissões, logs e integrações seguras"
+      ],
+      en: [
+        "Process mapping",
+        "Dashboards and operational indicators",
+        "Permissions, logs, and secure integrations"
+      ]
+    }
+  },
+  {
+    id: "modernize",
+    label: { pt: "Modernizar legado", en: "Modernize legacy" },
+    title: {
+      pt: "Plano para evoluir sistemas existentes com menor risco operacional",
+      en: "A plan to evolve existing systems with lower operational risk"
+    },
+    description: {
+      pt: "Ideal para empresas que já têm site, sistema ou aplicativo rodando e precisam elevar qualidade, estabilidade e capacidade de evolução.",
+      en: "Ideal for companies that already have a live site, system, or application and need better quality, stability, and room to evolve."
+    },
+    outcomes: {
+      pt: [
+        "Redução de gargalos técnicos e dívida acumulada",
+        "Melhor observabilidade, estabilidade e organização de ambiente",
+        "Nova capacidade de evolução sem interromper a operação"
+      ],
+      en: [
+        "Reduced technical bottlenecks and accumulated debt",
+        "Better observability, stability, and environment organization",
+        "New capacity to evolve without interrupting operations"
+      ]
+    },
+    serviceIndexes: [3, 7, 8],
+    deliveryModelIndex: 2,
+    signals: {
+      pt: [
+        "Refatoração com continuidade",
+        "Deploy, logs e ambientes organizados",
+        "Handoff e governança de código"
+      ],
+      en: [
+        "Refactoring with continuity",
+        "Deployment, logs, and organized environments",
+        "Handoff and code governance"
+      ]
+    }
+  },
+  {
+    id: "education",
+    label: { pt: "Educação e inovação", en: "Education and innovation" },
+    title: {
+      pt: "Estrutura indicada para laboratórios, cursos, treinamentos e iniciativas híbridas",
+      en: "A structure designed for labs, courses, training programs, and hybrid initiatives"
+    },
+    description: {
+      pt: "Boa aderência para instituições, edtechs e núcleos de inovação que precisam unir experiência, conteúdo, dados e acompanhamento.",
+      en: "A strong fit for institutions, edtechs, and innovation teams that need to connect experience, content, data, and follow-up."
+    },
+    outcomes: {
+      pt: [
+        "Experiência acessível para alunos, equipes e parceiros",
+        "Relatórios e jornadas claras de acompanhamento",
+        "Base pronta para portais, trilhas, conteúdo e automações"
+      ],
+      en: [
+        "Accessible experiences for students, staff, and partners",
+        "Clear reporting and follow-up journeys",
+        "A foundation ready for portals, learning paths, content, and automation"
+      ]
+    },
+    serviceIndexes: [0, 1, 6],
+    deliveryModelIndex: 0,
+    signals: {
+      pt: [
+        "Acessibilidade e usabilidade",
+        "Fluxos de conteúdo e relatórios",
+        "Escalabilidade para novos módulos"
+      ],
+      en: [
+        "Accessibility and usability",
+        "Content workflows and reporting",
+        "Scalability for new modules"
+      ]
+    }
+  }
+];
+
 // Perguntas frequentes usadas no accordion comercial.
 const faqs = [
   {
@@ -625,6 +805,16 @@ const faqs = [
   },
   {
     question: {
+      pt: "Como vocês tratam performance, acessibilidade e responsividade?",
+      en: "How do you handle performance, accessibility, and responsiveness?"
+    },
+    answer: {
+      pt: "Esses pontos entram desde o desenho inicial. Trabalhamos com navegação clara, formulários consistentes, contraste adequado, performance em mobile e desktop e revisão contínua dos fluxos principais.",
+      en: "These aspects are part of the project from the start. We work with clear navigation, reliable forms, appropriate contrast, performance on mobile and desktop, and continuous review of the core flows."
+    }
+  },
+  {
+    question: {
       pt: "Vocês conseguem assumir projetos que já estão em produção?",
       en: "Can you take over projects that are already in production?"
     },
@@ -635,42 +825,32 @@ const faqs = [
   },
   {
     question: {
-      pt: "O orçamento é feito só para projeto fechado ou também para time dedicado?",
-      en: "Is the quote only for fixed-scope projects or also for dedicated teams?"
+      pt: "Vocês documentam arquitetura, integrações e handoff?",
+      en: "Do you document architecture, integrations, and handoff?"
     },
     answer: {
-      pt: "Os dois formatos são possíveis. O orçamento pode ser montado para uma entrega fechada, para uma fase inicial de descoberta, para sustentação contínua ou para uma capacidade técnica recorrente.",
-      en: "Both formats are possible. The quote can be prepared for a fixed delivery, an initial discovery phase, continuous support, or recurring technical capacity."
+      pt: "Sim. Sempre que o projeto pede, organizamos visão de arquitetura, ambientes, integrações, backlog técnico e orientações de continuidade para reduzir dependência e facilitar evolução.",
+      en: "Yes. Whenever the project requires it, we organize architecture views, environments, integrations, technical backlog, and continuity guidance to reduce dependency and make future evolution easier."
     }
   },
   {
     question: {
-      pt: "Vocês atendem em português e inglês?",
-      en: "Do you support clients in Portuguese and English?"
+      pt: "É possível começar por uma fase de descoberta ou diagnóstico?",
+      en: "Can a project start with a discovery or diagnostic phase?"
     },
     answer: {
-      pt: "Sim. O site, os CTAs e as mensagens do WhatsApp já funcionam em português e inglês para manter a comunicação comercial coerente com o idioma ativo.",
-      en: "Yes. The site, CTAs, and WhatsApp messages already work in Portuguese and English to keep commercial communication aligned with the active language."
+      pt: "Sim. Em muitos casos esse é o caminho mais saudável. A fase inicial ajuda a organizar escopo, prioridades, riscos, integrações e uma estimativa mais confiável antes da construção completa.",
+      en: "Yes. In many cases that is the healthiest path. The initial phase helps organize scope, priorities, risks, integrations, and a more reliable estimate before full execution."
     }
   },
   {
     question: {
-      pt: "Vocês fazem só site institucional ou também sistema completo?",
-      en: "Do you only build institutional websites or also full systems?"
+      pt: "Vocês atendem em português e inglês e continuam no suporte depois da entrega?",
+      en: "Do you support clients in Portuguese and English, and do you stay involved after delivery?"
     },
     answer: {
-      pt: "Fazemos desde landing pages e sites institucionais até plataformas completas com login, painel, integrações, dados, automação, IA e infraestrutura de publicação.",
-      en: "We build everything from landing pages and institutional websites to full platforms with login, dashboards, integrations, data, automation, AI, and production infrastructure."
-    }
-  },
-  {
-    question: {
-      pt: "Depois da entrega vocês continuam dando suporte?",
-      en: "Do you continue to support the project after delivery?"
-    },
-    answer: {
-      pt: "Sim. O modelo pode incluir manutenção, evolução contínua, monitoramento, ajustes de performance, novas integrações e expansão funcional conforme o negócio cresce.",
-      en: "Yes. The model can include maintenance, continuous evolution, monitoring, performance improvements, new integrations, and functional expansion as the business grows."
+      pt: "Sim. O site, os CTAs e as mensagens comerciais já funcionam nos dois idiomas, e o modelo pode incluir manutenção, evolução contínua, monitoramento e expansão conforme o negócio cresce.",
+      en: "Yes. The site, CTAs, and commercial messages already work in both languages, and the model can include maintenance, continuous evolution, monitoring, and expansion as the business grows."
     }
   }
 ];
@@ -678,7 +858,8 @@ const faqs = [
 // Preferências persistidas do usuário restauradas no carregamento da página.
 const state = {
   language: localStorage.getItem("alfa-language") || "pt",
-  theme: localStorage.getItem("alfa-theme") || "dark"
+  theme: localStorage.getItem("alfa-theme") || "dark",
+  priorityScenario: priorityScenarios[0].id
 };
 
 
@@ -688,6 +869,8 @@ const featuredGrid = document.getElementById("featured-grid");
 const deliveryGrid = document.getElementById("delivery-grid");
 const industriesGrid = document.getElementById("industries-grid");
 const stackGroupsContainer = document.getElementById("stack-groups");
+const priorityTabs = document.getElementById("priority-tabs");
+const priorityPanel = document.getElementById("priority-panel");
 const faqList = document.getElementById("faq-list");
 const languageToggle = document.getElementById("language-toggle");
 const themeToggle = document.getElementById("theme-toggle");
@@ -696,6 +879,7 @@ const footerQuoteButton = document.getElementById("footer-quote-button");
 const floatingWhatsAppButton = document.getElementById("floating-whatsapp-button");
 const ctaSection = document.querySelector(".cta-section");
 const themeColorMeta = document.getElementById("theme-color-meta");
+const pageDescriptionMeta = document.getElementById("page-description-meta");
 const briefForm = document.getElementById("brief-form");
 const briefNameInput = document.getElementById("brief-name");
 const briefCompanyInput = document.getElementById("brief-company");
@@ -753,6 +937,7 @@ function renderServices() {
               href="${buildWhatsAppUrl(message)}"
               target="_blank"
               rel="noreferrer"
+              aria-label="${translations[language].serviceButton}: ${title}"
             >
               ${translations[language].serviceButton}
             </a>
@@ -864,6 +1049,99 @@ function renderStackGroups() {
     .join("");
 }
 
+// Localiza o cenário ativo e cai no primeiro item caso o identificador esteja ausente.
+function getActivePriorityScenario() {
+  return (
+    priorityScenarios.find((scenario) => scenario.id === state.priorityScenario) ||
+    priorityScenarios[0]
+  );
+}
+
+// Resolve os títulos de serviço a partir dos índices usados pelo mapa de prioridades.
+function getPriorityServiceTitles(language, serviceIndexes) {
+  return serviceIndexes
+    .map((serviceIndex) => services[serviceIndex]?.title[language])
+    .filter(Boolean);
+}
+
+// Renderiza o mapa de prioridades para conectar contexto, serviços e modelo recomendado.
+function renderPriorityPlanner() {
+  if (!priorityTabs || !priorityPanel) {
+    return;
+  }
+
+  const language = state.language;
+  const copy = translations[language];
+  const activeScenario = getActivePriorityScenario();
+  const relatedServices = getPriorityServiceTitles(language, activeScenario.serviceIndexes);
+  const relatedModel = deliveryModels[activeScenario.deliveryModelIndex];
+
+  priorityTabs.innerHTML = priorityScenarios
+    .map((scenario) => {
+      const isActive = scenario.id === activeScenario.id;
+
+      return `
+        <button
+          class="priority-tab${isActive ? " is-active" : ""}"
+          id="priority-tab-${scenario.id}"
+          type="button"
+          role="tab"
+          aria-selected="${isActive}"
+          aria-controls="priority-panel"
+          tabindex="${isActive ? "0" : "-1"}"
+          data-priority-tab="${scenario.id}"
+        >
+          ${scenario.label[language]}
+        </button>
+      `;
+    })
+    .join("");
+
+  priorityPanel.setAttribute("role", "tabpanel");
+  priorityPanel.setAttribute("aria-labelledby", `priority-tab-${activeScenario.id}`);
+  priorityPanel.innerHTML = `
+    <article class="priority-surface">
+      <div class="priority-intro">
+        <span class="priority-badge">${copy.priorityBadge}</span>
+        <h3>${activeScenario.title[language]}</h3>
+        <p>${activeScenario.description[language]}</p>
+      </div>
+
+      <div class="priority-grid">
+        <section class="priority-block">
+          <strong>${copy.priorityOutcomesTitle}</strong>
+          <ul class="priority-list">
+            ${activeScenario.outcomes[language].map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+        </section>
+
+        <section class="priority-block">
+          <strong>${copy.priorityServicesTitle}</strong>
+          <ul class="priority-list">
+            ${relatedServices.map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+        </section>
+
+        <section class="priority-block priority-block-model">
+          <strong>${copy.priorityModelTitle}</strong>
+          <span class="priority-model-kicker">${relatedModel.kicker[language]}</span>
+          <p class="priority-model-title">${relatedModel.title[language]}</p>
+          <p>${relatedModel.description[language]}</p>
+        </section>
+
+        <section class="priority-block">
+          <strong>${copy.prioritySignalsTitle}</strong>
+          <div class="priority-tags">
+            ${activeScenario.signals[language]
+              .map((item) => `<span class="priority-tag">${item}</span>`)
+              .join("")}
+          </div>
+        </section>
+      </div>
+    </article>
+  `;
+}
+
 // Renderiza perguntas frequentes em accordion para reduzir atrito comercial.
 function renderFaqs() {
   if (!faqList) {
@@ -905,6 +1183,14 @@ function renderBriefForm() {
   }));
 
   serviceOptions.push({
+    value: "discovery",
+    label:
+      language === "pt"
+        ? "Diagnóstico, descoberta ou roadmap"
+        : "Discovery, audit, or roadmap"
+  });
+
+  serviceOptions.push({
     value: "custom",
     label: language === "pt" ? "Outro projeto sob medida" : "Another custom project"
   });
@@ -931,6 +1217,10 @@ function updateTranslatableContent() {
   document.documentElement.lang = language === "pt" ? "pt-BR" : "en";
   document.title = copy.pageTitle;
 
+  if (pageDescriptionMeta) {
+    pageDescriptionMeta.setAttribute("content", copy.pageDescription);
+  }
+
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
 
@@ -942,6 +1232,10 @@ function updateTranslatableContent() {
   if (languageToggle) {
     languageToggle.textContent = copy.languageLabel;
     languageToggle.setAttribute("aria-label", copy.switchLanguageAria);
+  }
+
+  if (priorityTabs) {
+    priorityTabs.setAttribute("aria-label", copy.priorityTablistLabel);
   }
 
   const themeButtonLabel = theme === "dark" ? copy.themeButtonLight : copy.themeButtonDark;
@@ -982,6 +1276,7 @@ function updateTranslatableContent() {
   renderDeliveryModels();
   renderIndustries();
   renderStackGroups();
+  renderPriorityPlanner();
   renderFaqs();
   renderBriefForm();
 }
@@ -1027,7 +1322,7 @@ function unregisterLegacyServiceWorkers() {
         });
       })
       .catch((error) => {
-        console.error("Service worker cleanup failed:", error);
+        console.error("Falha ao limpar service workers antigos:", error);
       });
   });
 }
@@ -1083,6 +1378,78 @@ function registerBriefForm() {
   briefForm.addEventListener("submit", handleBriefSubmit);
 }
 
+// Permite trocar o cenário ativo por clique ou teclado para manter a navegação acessível.
+function registerPriorityPlanner() {
+  if (!priorityTabs) {
+    return;
+  }
+
+  const moveToScenario = (scenarioId) => {
+    if (!priorityScenarios.some((scenario) => scenario.id === scenarioId)) {
+      return;
+    }
+
+    state.priorityScenario = scenarioId;
+    renderPriorityPlanner();
+  };
+
+  priorityTabs.addEventListener("click", (event) => {
+    const targetButton = event.target.closest("[data-priority-tab]");
+
+    if (!targetButton) {
+      return;
+    }
+
+    moveToScenario(targetButton.dataset.priorityTab);
+  });
+
+  priorityTabs.addEventListener("keydown", (event) => {
+    const navigationKeys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+
+    if (!navigationKeys.includes(event.key)) {
+      return;
+    }
+
+    const tabButtons = [...priorityTabs.querySelectorAll("[data-priority-tab]")];
+    const currentIndex = tabButtons.findIndex(
+      (button) => button.dataset.priorityTab === state.priorityScenario
+    );
+
+    if (currentIndex === -1) {
+      return;
+    }
+
+    event.preventDefault();
+
+    let nextIndex = currentIndex;
+
+    if (event.key === "ArrowRight") {
+      nextIndex = (currentIndex + 1) % tabButtons.length;
+    }
+
+    if (event.key === "ArrowLeft") {
+      nextIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+    }
+
+    if (event.key === "Home") {
+      nextIndex = 0;
+    }
+
+    if (event.key === "End") {
+      nextIndex = tabButtons.length - 1;
+    }
+
+    const nextButton = tabButtons[nextIndex];
+
+    if (!nextButton) {
+      return;
+    }
+
+    moveToScenario(nextButton.dataset.priorityTab);
+    nextButton.focus();
+  });
+}
+
 // Esconde o botão flutuante quando a seção final de orçamento estiver visível.
 function registerFloatingWhatsAppBehavior() {
   if (!floatingWhatsAppButton || !ctaSection) {
@@ -1135,4 +1502,5 @@ applyTheme();
 applyLanguage();
 unregisterLegacyServiceWorkers();
 registerBriefForm();
+registerPriorityPlanner();
 registerFloatingWhatsAppBehavior();
