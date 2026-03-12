@@ -121,6 +121,13 @@ const translations = {
     ctaText:
       "Seja para empresa, operação interna, produto digital ou iniciativa educacional, a conversa já começa com o contexto certo.",
     ctaButton: "Solicitar orçamento",
+    footerLegal: "Todos os direitos reservados.",
+    footerText:
+      "Desenvolvimento sob medida para web, mobile, sistemas, automação e integração.",
+    footerTopLink: "Voltar ao topo",
+    footerServicesLink: "Serviços",
+    footerFaqLink: "FAQ",
+    footerNavAria: "Links do rodapé",
     floatingWhatsApp: "WhatsApp",
     quoteMessage:
       "Olá, quero solicitar uma análise inicial e um orçamento para um projeto com a ALFA TECH Studio.",
@@ -247,6 +254,13 @@ const translations = {
     ctaText:
       "Whether this is for a company, an internal operation, a digital product, or an educational initiative, the conversation starts with the right context.",
     ctaButton: "Request a quote",
+    footerLegal: "All rights reserved.",
+    footerText:
+      "Custom development for web, mobile, systems, automation, and integration.",
+    footerTopLink: "Back to top",
+    footerServicesLink: "Services",
+    footerFaqLink: "FAQ",
+    footerNavAria: "Footer links",
     floatingWhatsApp: "WhatsApp",
     quoteMessage:
       "Hello, I would like to request an initial assessment and a quote for a project with ALFA TECH Studio.",
@@ -880,6 +894,7 @@ const floatingWhatsAppButton = document.getElementById("floating-whatsapp-button
 const ctaSection = document.querySelector(".cta-section");
 const themeColorMeta = document.getElementById("theme-color-meta");
 const pageDescriptionMeta = document.getElementById("page-description-meta");
+const footerYear = document.getElementById("footer-year");
 const briefForm = document.getElementById("brief-form");
 const briefNameInput = document.getElementById("brief-name");
 const briefCompanyInput = document.getElementById("brief-company");
@@ -1229,6 +1244,14 @@ function updateTranslatableContent() {
     }
   });
 
+  document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+    const key = element.dataset.i18nAria;
+
+    if (copy[key]) {
+      element.setAttribute("aria-label", copy[key]);
+    }
+  });
+
   if (languageToggle) {
     languageToggle.textContent = copy.languageLabel;
     languageToggle.setAttribute("aria-label", copy.switchLanguageAria);
@@ -1279,6 +1302,15 @@ function updateTranslatableContent() {
   renderPriorityPlanner();
   renderFaqs();
   renderBriefForm();
+}
+
+// Mantém o ano do rodapé atualizado sem exigir edição manual do HTML.
+function applyFooterYear() {
+  if (!footerYear) {
+    return;
+  }
+
+  footerYear.textContent = String(new Date().getFullYear());
 }
 
 // Persiste o tema ativo e sincroniza a cor da interface do navegador.
@@ -1509,6 +1541,7 @@ if (themeToggle) {
 // Inicialização da página.
 applyTheme(false);
 applyLanguage();
+applyFooterYear();
 unregisterLegacyServiceWorkers();
 registerBriefForm();
 registerPriorityPlanner();

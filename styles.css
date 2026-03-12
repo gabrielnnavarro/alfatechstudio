@@ -1433,6 +1433,85 @@ body[data-theme="light"] .form-field textarea:focus {
     var(--panel-strong);
 }
 
+/* Rodapé institucional compacto para texto legal e navegação auxiliar. */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  padding:
+    0 0
+    calc(1.8rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--bg-elevated);
+}
+
+.site-footer-inner {
+  width: min(
+    var(--page-width),
+    calc(100% - (var(--page-gutter) * 2) - env(safe-area-inset-left) - env(safe-area-inset-right))
+  );
+  margin: 0 auto;
+  padding-top: 1.35rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-footer-copy {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.site-footer-title,
+.site-footer-legal,
+.site-footer-text,
+.site-footer-nav a {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.site-footer-title {
+  color: var(--text);
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.04em;
+}
+
+.site-footer-separator {
+  color: var(--text-soft);
+  margin: 0 0.3rem;
+}
+
+.site-footer-legal,
+.site-footer-text,
+.site-footer-nav a {
+  color: var(--text-muted);
+}
+
+.site-footer-text {
+  max-width: 48rem;
+}
+
+.site-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.85rem 1rem;
+}
+
+.site-footer-nav a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer-nav a:hover,
+.site-footer-nav a:focus-visible {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .floating-whatsapp {
   position: fixed;
   right: max(1.2rem, env(safe-area-inset-right));
@@ -1534,6 +1613,14 @@ body[data-theme="light"] .form-field textarea:focus {
   .site-header-inner {
     grid-template-columns: 1fr;
     align-items: start;
+  }
+
+  .site-footer-inner {
+    flex-direction: column;
+  }
+
+  .site-footer-nav {
+    justify-content: flex-start;
   }
 
   .header-controls {
