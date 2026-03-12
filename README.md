@@ -3,7 +3,7 @@
 Site institucional da ALFA TECH Studio, criado para apresentar serviços, gerar contato comercial e concentrar pedidos de orçamento pelo WhatsApp.
 
 ## Projeto online
-https://gabrielnnavarro.github.io/agencia-alfa-assessoria/
+https://gabrielnnavarro.github.io/alfatechstudio/
 
 ## Visão geral
 
@@ -44,4 +44,4 @@ Como o projeto é totalmente estático, basta abrir o arquivo `index.html` no na
 
 ## Publicação
 
-O deploy está configurado pela Netlify a partir da branch `main` do repositório.
+O deploy está configurado pelo GitHub Pages a partir da branch `main` do repositório.
